@@ -6,8 +6,7 @@ module.exports = {
   entry: {
     popup: "./src/popup.js",
     blockPage: "./src/blockPage.js",
-    onDocumentStart: "./src/onDocumentStart.js",
-    background: "./src/background.js"
+    onDocumentStart: "./src/onDocumentStart.js"
   },
   module: {
     rules: [
