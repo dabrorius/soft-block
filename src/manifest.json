@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Soft Block",
+  "description": "Soft Block helps you be more conscious about websites you visit. It will require you to wait out a delay before accessing websites in block list.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icon16.png",
+    "24": "icon24.png",
+    "32": "icon32.png",
+    "128": "icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "24": "icon24.png",
+      "32": "icon32.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["<all_urls>"],
+      "js": ["onDocumentStart.js"]
+    }
+  ],
+  "web_accessible_resources": ["meditate.svg", "blockPage.html"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "applications": {
+    "gecko": {
+      "id": "filip.defar@gmail.com"
+    }
+  }
+}

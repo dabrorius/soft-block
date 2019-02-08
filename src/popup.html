@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Unhook Quick Options</title>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <div>
+        <div class="header">
+          <img src="logo.svg" />
+          <div v-if="currentUrl" class="url">{{ currentUrl }}</div>
+          <div v-else>Soft Block</div>
+        </div>
+        <a
+          v-if="currentUrl"
+          v-on:click="toggleUrlBlocking"
+          v-bind:class="blockButtonClass"
+        >
+          <span v-if="isBlocked">Remove soft block</span>
+          <span v-else>Soft block this domain</span>
+        </a>
+      </div>
+      <div class="overrideInfo">
+        <span class="overrideInfo__overriding" v-if="currentlyOverriding"
+          >Override ends {{ lastOverrideFromNow }}!</span
+        >
+        <span v-else="currentlyOverriding"
+          >Last override was {{ lastOverrideFromNow }}.</span
+        >
+      </div>
+    </div>
+  </body>
+</html>
