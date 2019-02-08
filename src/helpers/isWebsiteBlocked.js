@@ -5,7 +5,6 @@ export function isWebsiteBlocked(callback) {
       override: null
     },
     function(options) {
-      console.log("OPTIONS", options);
       let currentUrl = window.location.toString();
       let blockList = options.blockList;
       let isBlocked = false;
@@ -15,7 +14,6 @@ export function isWebsiteBlocked(callback) {
       }
       let override = options.override;
       const isBlockingOverriden = override && new Date(override) > Date.now();
-      console.log(isBlocked, isBlockingOverriden, override, Date.now());
       callback(isBlocked && !isBlockingOverriden);
     }
   );
