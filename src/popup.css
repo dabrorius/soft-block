@@ -34,29 +34,6 @@ body {
   width: 2rem;
 }
 
-a,
-a:link,
-a:visited,
-a:focus,
-a:hover,
-a:active {
-  color: #ffffffdd;
-  font-size: 0.9rem;
-  text-decoration: none;
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-.blocked {
-  background-color: #83af9b;
-}
-
-.unblocked {
-  background-color: #e3727c;
-}
-
 .overrideInfo {
   font-size: 0.8rem;
   color: #555;
