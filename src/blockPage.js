@@ -1,6 +1,7 @@
 import Vue from "vue/dist/vue.js";
 import "./blockPage.css";
-import quote from "./components/quote.vue";
+
+import QuoteSection from "./components/QuoteSection.vue";
 import SlowButton from "./components/SlowButton.vue";
 
 const overrideDuration = 1000 * 60 * 10; // 10 minutes
@@ -15,7 +16,7 @@ new Vue({
     }
   },
   components: {
-    quote,
+    QuoteSection,
     SlowButton
   }
 });
