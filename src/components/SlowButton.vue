@@ -16,9 +16,6 @@ const numberOfSteps = 100;
 const countStepDelay = unlockDuration / numberOfSteps;
 
 export default {
-  props: {
-    onUnlocked: Function
-  },
   data: function() {
     return { counter: 0, timeoutInstance: null };
   },
