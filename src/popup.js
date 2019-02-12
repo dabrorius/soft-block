@@ -1,9 +1,9 @@
 import Vue from "vue/dist/vue.js";
 import { getCurrentURL } from "./helpers/getCurrentURL";
 import { stemURL } from "./helpers/stemURL";
-import * as moment from "moment";
 
 import BlockButton from "./components/BlockButton.vue";
+import OverrideInfo from "./components/OverrideInfo.vue";
 
 import "./popup.css";
 
@@ -15,12 +15,6 @@ var app = new Vue({
     blockList: []
   },
   computed: {
-    currentlyOverriding: function() {
-      return this.override && new Date(this.override) > new Date();
-    },
-    lastOverrideFromNow: function() {
-      return this.override ? moment(this.override).fromNow() : "never";
-    },
     isBlocked: function() {
       return this.blockList.includes(this.currentUrl);
     }
@@ -57,10 +51,11 @@ var app = new Vue({
       if (isBlockable) {
         this.currentUrl = url;
       }
-      this.loadStorage();
+      this.loadDataFromStorage();
     });
   },
   components: {
-    BlockButton
+    BlockButton,
+    OverrideInfo
   }
 });

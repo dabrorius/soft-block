@@ -33,15 +33,3 @@ body {
 .header img {
   width: 2rem;
 }
-
-.overrideInfo {
-  font-size: 0.8rem;
-  color: #555;
-  text-align: center;
-  padding: 1rem 0.5rem;
-}
-
-.overrideInfo__overriding {
-  font-weight: bold;
-  color: #111;
-}

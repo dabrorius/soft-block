@@ -16,14 +16,7 @@
         v-bind:current-url="currentUrl"
         @toggle="toggleUrlBlocking"
       ></block-button>
-      <div class="overrideInfo">
-        <span class="overrideInfo__overriding" v-if="currentlyOverriding"
-          >Override ends {{ lastOverrideFromNow }}!</span
-        >
-        <span v-else="currentlyOverriding"
-          >Last override was {{ lastOverrideFromNow }}.</span
-        >
-      </div>
+      <override-info v-bind:override="override"></override-info>
     </div>
   </body>
 </html>
