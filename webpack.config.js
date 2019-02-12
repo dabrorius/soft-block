@@ -48,8 +48,8 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
+      title: "Soft Block Options",
       filename: "popup.html",
-      template: "./src/popup.html",
       chunks: ["popup"]
     }),
     new HtmlWebpackPlugin({

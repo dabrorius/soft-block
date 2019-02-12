@@ -4,19 +4,7 @@
   </head>
   <body>
     <div id="app" class="container">
-      <div>
-        <div class="header">
-          <img src="logo.svg" />
-          <div v-if="currentUrl" class="url">{{ currentUrl }}</div>
-          <div v-else>Soft Block</div>
-        </div>
-      </div>
-      <block-button
-        v-bind:is-blocked="isBlocked"
-        v-bind:current-url="currentUrl"
-        @toggle="toggleUrlBlocking"
-      ></block-button>
-      <override-info v-bind:override="override"></override-info>
+      <popup></popup>
     </div>
   </body>
 </html>
