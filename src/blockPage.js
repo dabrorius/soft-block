@@ -1,22 +1,16 @@
-import Vue from "vue/dist/vue.js";
-import "./blockPage.css";
+import Vue from "vue";
+import BlockPage from "./components/BlockPage.vue";
 
-import QuoteSection from "./components/QuoteSection.vue";
-import SlowButton from "./components/SlowButton.vue";
-
-const overrideDuration = 1000 * 60 * 10; // 10 minutes
+const root = document.createElement("div");
+root.id = "app-root";
+document.body.appendChild(root);
 
 new Vue({
-  el: "#app",
-  methods: {
-    override: function() {
-      const override = new Date(Date.now() + overrideDuration);
-      chrome.storage.sync.set({ override });
-      window.history.back();
-    }
-  },
+  el: "#app-root",
   components: {
-    QuoteSection,
-    SlowButton
+    BlockPage
+  },
+  render: function(createElement) {
+    return createElement("block-page");
   }
 });

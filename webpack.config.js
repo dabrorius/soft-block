@@ -52,8 +52,8 @@ module.exports = {
       chunks: ["popup"]
     }),
     new HtmlWebpackPlugin({
+      title: "Soft Blocked",
       filename: "blockPage.html",
-      template: "./src/blockPage.html",
       chunks: ["blockPage"]
     })
   ]
