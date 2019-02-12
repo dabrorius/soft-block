@@ -4,8 +4,9 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 module.exports = {
   mode: "development",
+  node: false,
   entry: {
-    popup: "./src/popup.js",
+    options: "./src/options.js",
     blockPage: "./src/blockPage.js",
     onDocumentStart: "./src/onDocumentStart.js",
     assets: "./src/assets.js"
@@ -49,8 +50,8 @@ module.exports = {
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: "Soft Block Options",
-      filename: "popup.html",
-      chunks: ["popup"]
+      filename: "options.html",
+      chunks: ["options"]
     }),
     new HtmlWebpackPlugin({
       title: "Soft Blocked",

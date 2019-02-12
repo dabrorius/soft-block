@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Popup from "./components/Popup.vue";
+import OptionsScreen from "./components/OptionsScreen.vue";
 
 const root = document.createElement("div");
 root.id = "app-root";
@@ -8,9 +8,9 @@ document.body.appendChild(root);
 new Vue({
   el: "#app-root",
   components: {
-    Popup
+    OptionsScreen
   },
   render: function(createElement) {
-    return createElement("popup");
+    return createElement("options-screen");
   }
 });
