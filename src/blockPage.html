@@ -6,17 +6,7 @@
     <div id="app">
       <div class="central-column">
         <quote></quote>
-        <a
-          v-bind:style="buttonStyleObject"
-          @mousedown="startCountdown"
-          @mouseup="stopCountdown"
-          @mouseout="stopCountdown"
-        >
-          <span v-if="unlocking"> {{ counter }}% </span>
-          <span v-else>
-            Hold to unlock
-          </span>
-        </a>
+        <slow-button @unlocked="override"></slow-button>
         <img src="meditate.svg" class="central-image" />
       </div>
     </div>
